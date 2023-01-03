@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/validation-form-using-Formik-Yup/static/css/main.919c3633.css",
+    "main.js": "/validation-form-using-Formik-Yup/static/js/main.7d0ce48a.js",
+    "static/js/787.aeb39de0.chunk.js": "/validation-form-using-Formik-Yup/static/js/787.aeb39de0.chunk.js",
+    "index.html": "/validation-form-using-Formik-Yup/index.html",
+    "main.919c3633.css.map": "/validation-form-using-Formik-Yup/static/css/main.919c3633.css.map",
+    "main.7d0ce48a.js.map": "/validation-form-using-Formik-Yup/static/js/main.7d0ce48a.js.map",
+    "787.aeb39de0.chunk.js.map": "/validation-form-using-Formik-Yup/static/js/787.aeb39de0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.919c3633.css",
+    "static/js/main.7d0ce48a.js"
+  ]
+}
