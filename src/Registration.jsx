@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useFormik } from "formik";
 import { signUpSchema } from "./schemas/index";
 import DataTable from "./Datatable";
@@ -11,10 +12,12 @@ const initialValues = {
 };
 
 const Registration = () => {
-  const {values, errors, touched, handleBlur, handleChange, handleSubmit, } = useFormik({
+  const [validatedData,setvalidatedData]=useState([])
+  const {values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
     validationSchema:signUpSchema,
     onSubmit: (values,action) => {
+      setvalidatedData([...validatedData,values])
       console.log(values);
       action.resetForm();
     },
@@ -125,7 +128,7 @@ const Registration = () => {
               </div>
             </div>
           </div>
-          { values.length>0 && <DataTable valDat={values} />}
+          {  <DataTable valDat={validatedData} />}
         </div>
     </>
   );
