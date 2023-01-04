@@ -2,7 +2,7 @@ import React from "react";
 import "./Datatable.css";
 
 
-const DataTable = ({ valDat }) => {
+const DataTable = ({ valDat,handleDelete }) => {
     return (
         <div className="val-table">
             <h2>Validated data</h2>
@@ -12,7 +12,7 @@ const DataTable = ({ valDat }) => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Password</th>
-                        {/* <th>Delete</th> */}
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 {valDat &&
@@ -21,7 +21,11 @@ const DataTable = ({ valDat }) => {
                                 <td>{data.name}</td>
                                 <td>{data.email}</td>
                                 <td>{data.password}</td>
-                                
+                                <img
+                                        src="https://img.icons8.com/material-sharp/512/delete-forever.png"
+                                        className="del-button"
+                                        onClick={() => handleDelete(i)}
+                                    />
                             </tr>
                         ))}
             </table>

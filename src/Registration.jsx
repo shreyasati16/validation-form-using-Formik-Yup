@@ -14,6 +14,7 @@ const initialValues = {
 const Registration = () => {
   const [validatedData,setvalidatedData]=useState([])
   const {values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+    
     initialValues: initialValues,
     validationSchema:signUpSchema,
     onSubmit: (values,action) => {
@@ -23,6 +24,14 @@ const Registration = () => {
     },
   });
   console.log(errors);
+  const handleDelete=(i)=>{
+    setvalidatedData((prev)=>{
+        let temp=[...prev]
+        temp.splice(i, 1);
+        return temp;
+    });
+  };
+  
 
   return (
     <>
@@ -128,7 +137,7 @@ const Registration = () => {
               </div>
             </div>
           </div>
-          {  <DataTable valDat={validatedData} />}
+          { validatedData.length>0 && <DataTable valDat={validatedData} handleDelete={handleDelete}/>}
         </div>
     </>
   );
