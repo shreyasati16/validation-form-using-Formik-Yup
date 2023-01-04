@@ -25,8 +25,8 @@ const Registration = () => {
   });
   console.log(errors);
   const handleDelete=(i)=>{
-    setvalidatedData((prev)=>{
-        let temp=[...prev]
+    setvalidatedData((validatedData)=>{
+        const temp=[...validatedData]
         temp.splice(i, 1);
         return temp;
     });
